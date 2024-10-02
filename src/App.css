@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+	overflow: hidden;
+}
+
+section
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
+	z-index: 1;
+	
+}
+
+section .color
+{
+	position: absolute;
+	filter: blur(150px);
+	z-index: 0;
+}
+
+
+section .color:nth-child(1)
+{
+	top: -350px;
+	right: 800px;
+	width: 600px;
+	height: 600px;
+	background: #778beb;
+	z-index: 0;
+}	
+
+section .color:nth-child(2)
+{
+	bottom: -450px;
+	left: 500px;
+	width: 500px;
+	height: 500px;
+	background: #786fa6;
+	z-index: 0;	
+}
+	
+section .color:nth-child(3)
+{
+	bottom: 350px;
+	right: -150px;
+	width: 300px;
+	height: 300px;
+	background: #f7d794;
+	z-index: 0;
+}	
+
+.box
+{
+	position: relative;
+}
+
+.box .square
+{
+	position: absolute;
+	backdrop-filter: blur(5px);
+	box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+	border: 1px solid rgba(255, 255,255,0.5);
+	border-right: 1px solid rgba(255,255,255,0.2);
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	background: rgba(255, 255, 255, 0.1);	
+	border-radius:10px;
+	animation: animate 10s cubic-bezier(.5, .05, .1, .3) infinite;
+	animation-delay: calc(-1s * var(--i));
+}
+
+@keyframes animate
+{
+	0%, 100%
+		{
+			transform: translateY(-70px) rotate(0deg) scale(1);
+		}
+	25%
+		{
+			transform: translateY(35px) rotate(35deg) scale(1.1);
+		}
+	50%
+		{
+			transform: translateY(80px) rotate(100deg) scale(1);
+			
+		}
+	75%
+		{
+			transform: translateY(-35px) rotate(-25deg) scale(0.9);
+		}
+}
+
+.box .square:nth-child(1)
+{
+	top: -50px;
+	right: -60px;
+	width: 100px;
+	height: 100px;
+		
+}
+
+.box .square:nth-child(2)
+{
+	top: 150px;
+	left: -100px;
+	width: 120px;
+	height: 120px;
+}
+
+.box .square:nth-child(3)
+{
+	bottom: 50px;
+	right: -60px;
+	width: 80px;
+	height: 80px;
+	z-index: 2;
+}
+
+.box .square:nth-child(4)
+{
+	bottom: -80px;
+	right: 120px;
+	width: 50px;
+	height: 50px;
+	
+}
+
+.box .square:nth-child(5)
+{
+	top: -80px;
+	right: -200px;
+	width: 60px;
+	height: 60px;
+	
+}
+
+.box .square:nth-child(6)
+{
+	bottom: -100px;
+	left: -120px;
+	width: 90px;
+	height: 90px;
+}
+
+.container
+{
+	position: relative;
+	width: 600px;
+	height: 700px;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	backdrop-filter: blur(5px);
+	box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+	border: 1px solid rgba(255, 255,255,0.5);
+	border-right: 1px solid rgba(255,255,255,0.2);
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.nav
+{
+	position: relative;
+	display: flex;
+	justify-content: space-evenly;
+	z-index: 2;
+	font-weight: 700;
+	padding: 20px;
+	background-color: #f8f9fa;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	
+}
+
+.nav a
+{
+	color: #333;
+	text-decoration: none;
+	padding: 0 15px;
+	transition: color 0.3s ease;
+}
+
+.nav a:hover
+{
+	color: #007bff;
+}
+
+.form
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 30px;
+	z-index: 2;
+		
+}
+
+.title
+{	
+	position: relative;
+	color: #fff;
+	font-size:24px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	margin-bottom: 40px;
+	text-decoration: underline;
+	z-index: 2;
+}
+
+
+.form .inputBox
+{
+	width: 100%;
+	margin-top: 20px;
+}
+
+.form .inputBox input, textarea
+{
+	width: 100%;
+	background: rgba(255,255,255,0.2);
+	border: none;
+	outline: none;
+	padding: 10px 20px;
+	border-radius: 35px;
+	border: 1px solid rgba(255, 255,255,0.5);
+	border-right: 1px solid rgba(255,255,255,0.2);
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	font-size: 16px;
+	letter-spacing: 1px;
+	color: black;
+	box-shaddow: 0 5px 15px rgba(0,0,0,0.05);
+	resize: none;	
+}
+
+.form .inputBox input::placeholder , textarea::placeholder
+{
+	color: gray;
+}
+
+.form .inputBox button
+{
+	
+	width: 100%;
+	background: rgba(255,255,255,0.2);
+	border: none;
+	outline: none;
+	padding: 10px 20px;
+	border-radius: 35px;
+	border: 1px solid rgba(255, 255,255,0.5);
+	border-right: 1px solid rgba(255,255,255,0.2);
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	font-size: 16px;
+	letter-spacing: 1.6px;
+	color: black;
+	box-shaddow: 0 5px 15px rgba(0,0,0,0.05);
+	color: #666;
+	max-width: 100px;
+	cursor: pointer;
+	margin-bottom: 20px;
+	font-weight: 600;
+}
+
+.form .inputBox button:hover
+{
+	background-color: #fff;
+}
+
+.Admin-Login-Container
+{
+	position: relative;
+	padding: 20px;
+	margin-top: 100px;
+	width: 400px;
+	min-height: 400px;
+	background: #f5f7fa;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+	border: 1px solid rgba(255, 255,255,0.5);
+	border-right: 1px solid rgba(255,255,255,0.2);
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.Admin-Login-Form
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 40px;
+}
+
+.Admin-Title
+{
+	top: 10px;
+	position: relative;
+	font-size: 24px;
+	font-weight: 600;
+	letter-spacing: 1.3px;
+	margin-bottom: -30px;
+	text-decoration: underline;
+}
+
+ 
+.Admin-Login-Form .Admin-InputBox
+{
+	width: 100%;
+	margin-top: 20px;
+}
+
+.Admin-Login-Form .Admin-InputBox input
+{
+	width: 100%;
+	background: #fff;
+	border: none;
+	outline: none;
+	padding: 10px 50px;
+	border-radius: 30px;
+	border: 1px solid #ddd;
+	border-right: 1px solid rgba(255,255,255,0.2);
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	font-size: 15px;
+	letter-spacing: 1px;
+	color: #333;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+	resize: none;
+}
+
+.Admin-Login-Form .Admin-InputBox input::placeholder
+{
+	color: gray;
+	position: relative;
+
+}
+
+.Admin-Login-Form .Admin-InputBox button
+{
+	width: 50%;
+	font-size: 16px;
+	background-color: #778beb;
+	padding: 10px 20px;
+	border: none; 
+	outline: none;
+	border-radius: 30px;
+	border: 1px solid rgba(255,255,255,0.5);
+	border-right: 1px solid rgba(255,255,255,0.2);
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	letter-spacing: 1px;
+	color: #fff;
+	box-shadow: none;
+	max-width: 100%;
+	cursor: pointer;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+.Admin-Login-Form .Admin-InputBox button:hover
+{
+	background-color: #786fa6;
+	color: #fff;
+}
+
+
+.Admin-Box
+{
+	width: 100%;
+	padding: 20px;
+	background-color: #f8f9fa;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.15);
+	overflow: auto;
+	z-index: 2;
+}
+
+.Database-Table
+{
+	width: 100%;
+	font-size: 25px;
+	border-collapse: collapse;
+	z-index: 2;
+}
+
+.Database-Table th
+{
+	background-color: #007bff;
+	color: white;
+	border: 1px solid black;
+	text-align: center;
+	padding: 10px;
+	z-index: 2;
+}
+
+.Database-Table tbody .Entry-Content:hover
+{
+	background-color: #fff;
+	color: #007bff;
+	transition: background-color 0.3s ease, color 0.3s ease;
+	z-index: 2;
+}
+
+.Database-Table td
+{
+	border-bottom: 1.3px solid black;
+	padding: 20px;
+	border: 1px solid black;
+	z-index: 2;
+}
+
+.Database-Table button {
+	width: 110px;
+	border: none;
+	outline: none;
+	border-radius: 20px;
+	color: white;
+	background-color: #007bff;
+	font-size: 25px;
+	z-index: 2;
+}
+
+.Database-Table button:hover
+{
+	cursor: pointer;
+	color: #007bff;
+	transition: background-color 0.5s ease;
+	background-color: #fff;	
+	z-index: 2;
+}
+
+.logout-btn button
+{
+	width: 120px;
+	border: none;
+	outline: none;
+	border-radius: 20px;
+	color: white;
+	background-color: #007bff;
+	font-size: 25px;
+	z-index: 2;
+}
+
+.logout-btn button:hover
+{
+	cursor: pointer;
+	color: #007bff;
+	transition: background-color 0.5s ease;
+	background-color: #fff;
+	z-index: 2;
+}
+
+@keyframes rotate
+{
+	0% { transform: rotate( 0deg ); }
+	100% { transform: rotate(360deg); }
+}
+
+@keyframes fade
+{
+	0%, 100% { opacity: 1; }
+	50% { opacity: 0.5; }
+}
+
+.Admin-box .Admin-square
+{
+	position: absolute;
+	backdrop-filter: blur(5px);
+	box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+	border: 1px solid rgba(255, 255,255,0.5);
+	border-right: 1px solid rgba(255,255,255,0.2);
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	background: rgba(255, 255, 255, 0.1);	
+	border-radius:10px;
+	animation: rotate 5s linear infinite, fade 5s ease-in-out infinite;
+	animation-delay: calc(-1s * var(--i));
+}
+
+.Admin-box .Admin-square:nth-child(1)
+{
+	top: 50px;
+	right: 60px;
+	width: 100px;
+	height: 100px;
+	z-index: 2;		
+}
+
+.Admin-box .Admin-square:nth-child(2)
+{
+	top: 150px;
+	left: 100px;
+	width: 120px;
+	height: 120px;
+	z-index: 2;
+}
+
+.Admin-box .Admin-square:nth-child(3)
+{
+	bottom: 50px;
+	left: 60px;
+	width: 80px;
+	height: 80px;
+	z-index: 2;
+}
+
+.Admin-box .Admin-square:nth-child(4)
+{
+	bottom: 80px;
+	right: 120px;
+	width: 50px;
+	height: 50px;
+	z-index: 2;	
+}

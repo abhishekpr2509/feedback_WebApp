@@ -1,0 +1,25 @@
+
+//StarRating.css for working with look of Star Rating icons seperately:-
+.star-rating
+{
+	display: flex;
+	justify-content: center;
+}
+
+.star-rating input[type="radio"]
+{
+	display: none;
+}
+
+.star-rating label 
+{
+	color: white;
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+.star-rating .star.selected
+{
+	color: #778beb;
+	transition: color 0.3s ease;
+}
